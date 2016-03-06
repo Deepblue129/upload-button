@@ -11,7 +11,7 @@ class UploadButton extends React.Component {
 	render() {
 		return (
 			<div className="upload-button">
-				<input id="file" ref={(ref) => this.input = ref} onChange={this.onChange.bind(this)} type="file" />	
+				<input className="upload-button-file" ref={(ref) => this.input = ref} onChange={this.onChange.bind(this)} type="file" />	
 				<label style={this.props.styles} className={this.props.className} htmlFor="file">
 					{this.props.children}
 				</label>
