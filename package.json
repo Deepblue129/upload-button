@@ -1,7 +1,7 @@
 {
-  "name": "react-component",
+  "name": "upload-button",
   "version": "0.0.1",
-  "description": "React Component",
+  "description": "Upload Button",
   "main": "build/Component.js",
   "scripts": {
     "deploy": "npm run lint && npm run test && npm run build && gh-pages -d build",

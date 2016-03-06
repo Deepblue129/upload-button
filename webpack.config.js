@@ -82,7 +82,7 @@ if (TARGET === 'start' || !TARGET) {
                 include: [PATHS.view, PATHS.component]
             }]
         },
-        devtool: 'eval-source-map',
+        devtool: 'source-map',
         cache: true,
         debug: true,
         devServer: {
@@ -110,7 +110,7 @@ if (TARGET === 'start' || !TARGET) {
             new webpack.HotModuleReplacementPlugin(),
             new webpack.NoErrorsPlugin(),
             new HtmlWebpackPlugin({
-                title: 'Gallary',
+                title: 'React NPM Component Starter',
                 devServer: process.env.PORT,
                 inject: true,
                 filename: 'index.html',
