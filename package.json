@@ -23,18 +23,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Deepblue129/react-npm-component-starter"
+    "url": "https://github.com/Deepblue129/upload-button"
   },
   "keywords": [
     "react-component",
     "react"
   ],
-  "author": "YOUR NAME",
+  "author": "Michael Petrochuk",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Deepblue129/react-npm-component-starter/issues"
+    "url": "https://github.com/Deepblue129/upload-button/issues"
   },
-  "homepage": "https://github.com/Deepblue129/react-npm-component-starter",
+  "homepage": "https://github.com/Deepblue129/upload-button",
   "devDependencies": {
     "autoprefixer": "^6.3.3",
     "babel": "^6.3.26",
