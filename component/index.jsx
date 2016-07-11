@@ -11,8 +11,8 @@ class UploadButton extends React.Component {
 	render() {
 		return (
 			<div className="upload-button">
-				<input className="upload-button-file" ref={(ref) => this.input = ref} onChange={this.onChange.bind(this)} type="file" />	
-				<label style={this.props.styles} className={this.props.className} htmlFor="file">
+				<label style={this.props.styles} className={this.props.className}>
+					<input className="upload-button-file" ref={(ref) => this.input = ref} onChange={this.onChange.bind(this)} type="file" />	
 					{this.props.children}
 				</label>
 				{/* http://stackoverflow.com/questions/22752116/react-label-element */}

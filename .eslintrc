@@ -26,6 +26,7 @@
         "react/no-multi-comp": 1,
         "react/no-unknown-property": 1,
         "react/react-in-jsx-scope": 1,
-        "react/self-closing-comp": 1
+        "react/self-closing-comp": 1,
+        "no-unsafe-finally": 1
     }
 }

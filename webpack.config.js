@@ -6,6 +6,7 @@
 const webpack = require('webpack'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
     CleanWebpackPlugin = require('clean-webpack-plugin'),
+    nodeExternals = require('webpack-node-externals'),
     merge = require('webpack-merge'),
     path = require('path'),
     autoprefixer = require('autoprefixer'),
@@ -38,7 +39,7 @@ const common = {
                 include: [PATHS.view, PATHS.component]
             }, {
                 test: /\.(sass|scss)$/,
-                loaders: ['stylelint-loader'],
+                loaders: ['stylelint'],
                 include: [PATHS.view, PATHS.component]
             }
         ],
@@ -58,7 +59,7 @@ const common = {
     },
     postcss: function() {
         return [autoprefixer, precss];
-    }
+    },
 };
 
 if (TARGET === 'start' || !TARGET) {
@@ -141,20 +142,6 @@ if (TARGET === 'build' || TARGET === 'stats') {
                 include: [PATHS.view, PATHS.component]
             }]
         },
-        externals: {
-            react: {
-                root: 'React',
-                commonjs: 'react',
-                commonjs2: 'react',
-                amd: 'react'
-            },
-            'react-dom': {
-                root: 'ReactDOM',
-                commonjs: 'react-dom',
-                commonjs2: 'react-dom',
-                amd: 'react-dom'
-            }
-        },
         plugins: [
             new webpack.optimize.DedupePlugin(),
             new webpack.optimize.UglifyJsPlugin({
@@ -170,6 +157,7 @@ if (TARGET === 'build' || TARGET === 'stats') {
                     'NODE_ENV': JSON.stringify('production')
                 }
             })
-        ]
+        ],
+        externals: [nodeExternals()],
     });
 }
