@@ -1,6 +1,6 @@
 {
   "name": "react-upload-button-v2",
-  "version": "0.0.3",
+  "version": "0.5.0",
   "description": "Upload Button",
   "main": "build/Component.js",
   "scripts": {
@@ -67,6 +67,7 @@
     "style-loader": "^0.13.0",
     "stylelint": "^6.9.0",
     "stylelint-loader": "^6.0.0",
+    "stylelint-config-standard": "^10.0.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.12",
     "webpack-dev-server": "^1.14.1",
@@ -75,7 +76,6 @@
   },
   "dependencies": {
     "react": "^15.2.1",
-    "react-dom": "^15.2.1",
-    "stylelint-config-standard": "^10.0.0"
+    "react-dom": "^15.2.1"
   }
 }
