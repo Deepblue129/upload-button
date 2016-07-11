@@ -1,7 +1,8 @@
 'use strict';
 
 import React from 'react';
-import './style.scss';
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import s from './style.scss';
 
 class UploadButton extends React.Component {
 	onChange() {
@@ -28,5 +29,5 @@ UploadButton.propTypes = {
     styles: React.PropTypes.object
 };
 
-export default UploadButton;
+export default withStyles(s)(UploadButton);
 
