@@ -123,6 +123,7 @@ if (TARGET === 'start' || !TARGET) {
 
 if (TARGET === 'build' || TARGET === 'stats') {
     module.exports = merge(common, {
+        target: 'node',
         entry: {
             app: path.join(PATHS.component, 'index.jsx')
         },

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { render } from 'react-dom';
-import UploadButton from './../component/index.jsx';
+import UploadButton from './../build/Component.js';
 
 function handleChange(input) 
 {
