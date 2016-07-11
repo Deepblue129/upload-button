@@ -130,12 +130,12 @@ if (TARGET === 'build' || TARGET === 'stats') {
         output: {
             path: PATHS.build,
             filename: 'Component.js',
-            libraryTarget: 'umd2'
+            libraryTarget: 'commonjs2'
         },
         module: {
             loaders: [{
                 test: /\.(sass|scss)$/,
-                loaders: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+                loaders: ['isomorphic-style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
                 include: [PATHS.view, PATHS.component]
             }, {
                 test: /\.jsx?$/,
