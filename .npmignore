@@ -7,3 +7,5 @@ view
 component
 __tests__
 .gitignore
+/build/index.html
+node_modules
