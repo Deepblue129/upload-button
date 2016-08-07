@@ -1,0 +1,14 @@
+.upload-button {
+  label > * {
+    pointer-events: none;
+  }
+
+  .upload-button-file {
+    width: 0.1;
+    height: 0.1;
+    opacity: 0;
+    overflow: 'hidden';
+    position: 'absolute';
+    z-index: -100000000;
+  }
+}

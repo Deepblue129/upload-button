@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 // eslint-disable-next-line react/prop-types
 class UploadButton extends React.Component {
+  static propTypes = {
+    onChange: PropTypes.func.isRequired,
+    className: PropTypes.string,
+    children: PropTypes.element.isRequired,
+    style: PropTypes.object,
+  };
+
   constructor(props) {
     super(props);
 
@@ -13,21 +20,11 @@ class UploadButton extends React.Component {
   }
 
   render() {
-    const uploadButtonFileStyles = {
-      width: 0.1,
-      height: 0.1,
-      opacity: 0,
-      overflow: 'hidden',
-      position: 'absolute',
-      zIndex: -100000000,
-    };
-
     return (
       <div className="upload-button">
-        <label style={this.props.styles} className={this.props.className}>
+        <label style={{ ...this.props.style }} className={this.props.className}>
           <input
             className="upload-button-file"
-            style={uploadButtonFileStyles}
             ref={(ref) => { this.input = ref; }}
             onChange={this.onChange}
             type="file"
@@ -39,13 +36,6 @@ class UploadButton extends React.Component {
 		);
   }
 }
-
-UploadButton.propTypes = {
-  onChange: React.PropTypes.func.isRequired,
-  className: React.PropTypes.string,
-  children: React.PropTypes.element.isRequired,
-  styles: React.PropTypes.object,
-};
 
 export default UploadButton;
 
