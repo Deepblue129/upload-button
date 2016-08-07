@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import './style.scss';
 
 // eslint-disable-next-line react/prop-types
 class UploadButton extends React.Component {
@@ -38,4 +39,3 @@ class UploadButton extends React.Component {
 }
 
 export default UploadButton;
-
