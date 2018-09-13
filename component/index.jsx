@@ -8,6 +8,7 @@ class UploadButton extends React.Component {
     className: PropTypes.string,
     children: PropTypes.element.isRequired,
     style: PropTypes.object,
+    disabled: PropTypes.bool,
   };
 
   constructor(props) {
@@ -28,6 +29,7 @@ class UploadButton extends React.Component {
             className="upload-button-file"
             ref={(ref) => { this.input = ref; }}
             onChange={this.onChange}
+            disabled={this.props.disabled}
             type="file"
           />
           {this.props.children}
